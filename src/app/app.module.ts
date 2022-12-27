@@ -15,6 +15,7 @@ import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './view/home/home.component';
 import { MatCardModule } from '@angular/material/card';
 import { ProductManagementComponent } from './view/product-management/product-management.component';
+import { ProductCreateComponent } from './components/product-create/product-create.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ProductManagementComponent } from './view/product-management/product-ma
     FooterComponent,
     NavComponent,
     HomeComponent,
-    ProductManagementComponent
+    ProductManagementComponent,
+    ProductCreateComponent
   ],
   imports: [
     BrowserModule,
