@@ -3,7 +3,7 @@
     <!-- Menu -->
     <mat-sidenav class="sidenav" mode="side" opened fixedInViewport="true" fixedTopGap="64">
         <mat-nav-list class="nav-list">
-            <mat-list-item>
+            <mat-list-item routerLink="">
                 <a>
                     <i class="material-icons v-middle">
                         home
@@ -11,7 +11,7 @@
                     Home
                 </a>
             </mat-list-item>
-            <mat-list-item>
+            <mat-list-item routerLink="/products">
                 <a>
                     <i class="material-icons v-middle">
                         storefront
@@ -25,7 +25,7 @@
 
     <!-- Shiftable content -->
     <mat-sidenav-content class="content">
-        <app-home></app-home>
+        <router-outlet></router-outlet>
     </mat-sidenav-content>
 
 </mat-sidenav-container>
