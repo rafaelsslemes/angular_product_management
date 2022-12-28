@@ -17,6 +17,7 @@ import { MatCardModule } from '@angular/material/card';
 import { ProductManagementComponent } from './view/product-management/product-management.component';
 import { ProductCreateComponent } from './components/product-create/product-create.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { FillNumbersDirective } from './directives/fill-numbers.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { HighlightDirective } from './directives/highlight.directive';
     HomeComponent,
     ProductManagementComponent,
     ProductCreateComponent,
-    HighlightDirective
+    HighlightDirective,
+    FillNumbersDirective
   ],
   imports: [
     BrowserModule,
