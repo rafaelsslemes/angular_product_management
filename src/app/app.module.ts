@@ -16,6 +16,7 @@ import { HomeComponent } from './view/home/home.component';
 import { MatCardModule } from '@angular/material/card';
 import { ProductManagementComponent } from './view/product-management/product-management.component';
 import { ProductCreateComponent } from './components/product-create/product-create.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ProductCreateComponent } from './components/product-create/product-crea
     NavComponent,
     HomeComponent,
     ProductManagementComponent,
-    ProductCreateComponent
+    ProductCreateComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
