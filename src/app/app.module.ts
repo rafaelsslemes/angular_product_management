@@ -18,6 +18,7 @@ import { ProductManagementComponent } from './view/product-management/product-ma
 import { ProductCreateComponent } from './components/product-create/product-create.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { FillNumbersDirective } from './directives/fill-numbers.directive';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { FillNumbersDirective } from './directives/fill-numbers.directive';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
