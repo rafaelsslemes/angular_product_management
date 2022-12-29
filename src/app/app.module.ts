@@ -15,7 +15,7 @@ import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './view/home/home.component';
 import { MatCardModule } from '@angular/material/card';
 import { ProductManagementComponent } from './view/product-management/product-management.component';
-import { ProductCreateComponent } from './components/product-create/product-create.component';
+import { ProductCreateComponent } from './components/product/product-create/product-create.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { FillNumbersDirective } from './directives/fill-numbers.directive';
 import { MatButtonModule } from '@angular/material/button';
