@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-management',
@@ -7,9 +8,9 @@ import { Component } from '@angular/core';
 })
 export class ProductManagementComponent {
 
+  constructor(private router : Router){}
 
-navigateToProductCreate() {
-  console.log("ProductCreate");
-}
-
+  navigateToProductCreate() {
+    this.router.navigate(['/products/create']);
+  }
 }
