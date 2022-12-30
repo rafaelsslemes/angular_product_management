@@ -1,1 +1,6 @@
-<p>product-read works!</p>
+
+<mat-card class="card" *ngFor="let product of products">
+    <b>  {{ product.id }} -{{ product.name }} </b>
+    ${{ product.price }}
+
+</mat-card>
