@@ -18,8 +18,8 @@ export class ProductCreateComponent implements OnInit {
   }
 
   product: Product = {
-    name: "Test Product",
-    price: 150
+    name: "",
+    price: 0
   }
   
   createProduct(){

@@ -1,7 +1,25 @@
-<button mat-raised-button (click)="createProduct()">
-    Save
-</button>
+<mat-card class="card">
+    <mat-card-title>New Product</mat-card-title>
 
-<button mat-raised-button (click)="cancel()">
-    Cancel
-</button>
+    <form>
+        <!-- [(ngModel)] sintax enables th 2wayDataBinding, then the component
+        must have and object with attributes linked -->
+        <mat-form-field>
+            <input matInput name="name" placeholder="Nome" [(ngModel)]="product.name">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput name="price" placeholder="Price ($)" [(ngModel)]="product.price">
+        </mat-form-field>
+    </form>
+
+    <span>
+
+        <button mat-raised-button (click)="createProduct()" color="primary">
+            Save
+        </button>
+        
+        <button mat-raised-button (click)="cancel()">
+            Cancel
+        </button>
+    </span>
+</mat-card>
