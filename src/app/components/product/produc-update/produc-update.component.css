@@ -1,0 +1,12 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin-right: 15px;
+}
+
+.card {
+    padding: 25px
+}
