@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Observable } from 'rxjs';
+import { catchError, EMPTY, map, Observable } from 'rxjs';
 import { Product } from './product.model';
 
 @Injectable({
@@ -14,17 +14,28 @@ export class ProductService {
   // Receiving in contructor invokes Angular to Inject an instance by DI
   constructor(private snackBar : MatSnackBar, private http : HttpClient) { }
 
-  showMessage(msg : string){
+  showMessage(msg : string, isError : boolean = false){
     this.snackBar.open(msg, '', 
       {
         duration: 3000,
         horizontalPosition: 'right',
-        verticalPosition: 'top'
+        verticalPosition: 'top',
+        panelClass: isError ? ['msg-error'] : ['msg-success']
       });
   }
 
   create (product : Product) : Observable<Product>{
-    return this.http.post<Product>(this.backendUrl, product);
+    return this.http.post<Product>(this.backendUrl, product).pipe<Product, Product>
+    (
+      map((obj) => obj),
+      catchError((e) => this.errorHandler(e)
+    ));
+  }
+
+  errorHandler(e: any): Observable<never> {
+    console.log(e);
+    this.showMessage("An error ocurried", true);
+    return EMPTY;
   }
 
   read () : Observable<Product[]> {
