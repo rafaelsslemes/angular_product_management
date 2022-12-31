@@ -2,3 +2,15 @@
     margin-top: 15px;
     padding: 5px;
 }
+
+.delete {
+    color: red;
+}
+
+.edit {
+    color: green;
+}
+
+a {
+    padding: 10px;
+}
