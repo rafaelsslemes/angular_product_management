@@ -34,6 +34,7 @@ import { MatSortModule } from '@angular/material/sort';
 import localtePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { ProducUpdateComponent } from './components/product/produc-update/produc-update.component';
+import { ProductDeleteComponent } from './components/product/product-delete/product-delete.component';
 
 registerLocaleData(localtePt);
 
@@ -50,7 +51,8 @@ registerLocaleData(localtePt);
     FillNumbersDirective,
     ProductReadComponent,
     ProductReadTableComponent,
-    ProducUpdateComponent
+    ProducUpdateComponent,
+    ProductDeleteComponent
   ],
   imports: [
     BrowserModule,
