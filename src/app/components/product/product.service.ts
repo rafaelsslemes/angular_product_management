@@ -30,4 +30,15 @@ export class ProductService {
   read () : Observable<Product[]> {
     return this.http.get<Product[]>(this.backendUrl);
   }
+
+  readById (id : string) : Observable<Product> {
+    // Concat Syntax requires `` - Crasis/Crase
+    const url = `${this.backendUrl}/${id}`;
+    return this.http.get<Product>(url);
+  }
+
+  update (product : Product) : Observable<Product> {
+    const url = `${this.backendUrl}/${product.id}`;
+    return this.http.put<Product>(url, product);
+  }
 }
